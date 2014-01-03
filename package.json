@@ -5,9 +5,20 @@
   "dependencies": {
     "mongoose": "*"
    },
-  "engine": "node 0.6.x",
-	"scripts" : { 
-  		// "postinstall" : "node createPost.js"
-  }	
+  "engines": {
+    "node": "0.10.21",
+    "npm": "1.2.x"
+  },
+  "scripts": {
+    "start": "node server",
+    "test": "make test"
+  },
+  "devDependencies": {
+    "chai": "*",
+    "mocha": "*",
+    "should": "*",
+    "expect.js": "*",
+    "supertest": "*"
+  }
 }
 

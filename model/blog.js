@@ -5,7 +5,12 @@
 var mongoose = require("mongoose");
 
 //connect to database
-var db = mongoose.connect('mongodb://heroku:b8e3beea37de75b3784eb57664a65c94@dharma.mongohq.com:10063/app18406894');
+mdb = "mongodb://heroku:b8e3beea37de75b3784eb57664a65c94@dharma.mongohq.com:10063/app18406894";
+
+if (process.MONGOHQ_URI)
+  console("using MONGOHQ_URI");
+
+var db = mongoose.connect(process.MONGOHQ_URI || mdb);
 
 //create schema for blog post
 var blogSchema = new mongoose.Schema({

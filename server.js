@@ -26,6 +26,8 @@ function getpost(params, res){
 
 var express = require('express');
 var app = express();
+module.exports = app;
+
 app.use(express.bodyParser());
 
 app.get('/', function(req, res){
@@ -46,4 +48,5 @@ app.get('/posts/:id', function(req, res){
 
 // app.post('/post', function(req, res))
 
-app.listen(3000);
+if (process.NODE_ENV!='test')
+	var server = app.listen(3000);
