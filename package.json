@@ -3,6 +3,7 @@
   "author": "rjjm",
   "version": "0.0.1",
   "dependencies": {
+    "express": "*",
     "mongoose": "*"
    },
   "engines": {
