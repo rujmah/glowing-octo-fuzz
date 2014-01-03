@@ -24,7 +24,7 @@ describe('routes test', function(){
   	app.close();
   })
 
-	describe('Categories routes', function () {
+	describe('routes', function () {
 		it('get root', function(done) {
 			request
 				.get('/')

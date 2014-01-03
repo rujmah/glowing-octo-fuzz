@@ -5,7 +5,7 @@
 var mongoose = require("mongoose");
 
 //connect to database
-mdb = "mongodb://heroku:b8e3beea37de75b3784eb57664a65c94@dharma.mongohq.com:10063/app18406894";
+mdb = "mongodb://localhost:27017";
 
 if (process.MONGOHQ_URI)
   console("using MONGOHQ_URI");
