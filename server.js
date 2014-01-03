@@ -31,7 +31,7 @@ module.exports = app;
 app.use(express.bodyParser());
 
 app.get('/', function(req, res){
-	res.send('Please give us an author');
+	res.send({message: 'Please give us an author'});
 });
 
 app.get('/authors(/:author)', function(req, res){
