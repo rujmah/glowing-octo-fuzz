@@ -9,8 +9,10 @@ mdb = "mongodb://heroku:b8e3beea37de75b3784eb57664a65c94@dharma.mongohq.com:1006
 
 if (process.MONGOHQ_URI)
   console("using MONGOHQ_URI");
+if (process.MONGOLAB_URI)
+  console("using MONGOLAB_URI");
 
-var db = mongoose.connect(process.MONGOHQ_URI || mdb);
+var db = mongoose.connect(process.MONGOHQ_URI || process.MONGOLAB_URI || mdb);
 
 //create schema for blog post
 var blogSchema = new mongoose.Schema({
