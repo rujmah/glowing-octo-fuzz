@@ -48,5 +48,8 @@ app.get('/posts/:id', function(req, res){
 
 // app.post('/post', function(req, res))
 
-if (process.NODE_ENV!='test')
-	var server = app.listen(3000);
+if (process.NODE_ENV!='test') {
+	var port = process.env.PORT||3000;
+	console.log('starting server on port '+port)
+	var server = app.listen(port);
+}
