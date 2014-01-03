@@ -1,0 +1,13 @@
+{
+  "name": "quick-mongoose-tryout",
+  "author": "rjjm",
+  "version": "0.0.1",
+  "dependencies": {
+    "mongoose": "*"
+   },
+  "engine": "node 0.6.x",
+	"scripts" : { 
+  		// "postinstall" : "node createPost.js"
+  }	
+}
+
